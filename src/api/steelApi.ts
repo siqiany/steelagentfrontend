@@ -14,6 +14,17 @@ interface SearchParams {
   filename?: string;
 }
 
+export interface Composition {
+  Na: number
+  Mg: number
+  Al: number
+  Si: number
+  K: number
+  Ca: number
+  Ba: number
+  Fe: number
+}
+
 // 文件上传接口
 export const uploadFile = async (file: File) => {
   const formData = new FormData();
@@ -36,4 +47,11 @@ export const askQuestion = async (params: SearchParams) => {
 // 任务状态查询接口
 export const checkTaskStatus = async (taskId: string) => {
   return steelApi.get(`/api/task/${taskId}`)
+}
+
+export async function fetchPredictedCompositions(ri: number): Promise<Composition[]> {
+  const response = await axios.get('http://localhost:8000/predict', {
+    params: { ri }
+  })
+  return response.data
 }

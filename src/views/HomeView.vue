@@ -26,6 +26,13 @@
       >
         相图计算
       </el-button>
+      <el-button
+        type="primary"
+        size="large"
+        @click="$router.push('/predict')"
+      >
+        成分预测
+      </el-button>
     </div>
   </div>
 </template>

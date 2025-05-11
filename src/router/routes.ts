@@ -3,6 +3,7 @@ import type { RouteRecordRaw } from 'vue-router';
 import QaPage from '@/views/QaPage.vue';
 import SteelPhase from '@/views/SteelPhase.vue';
 import HomePage from '@/views/HomeView.vue';
+import Predict from '@/views/PredictView.vue';
 
 const routes: RouteRecordRaw[] = [
   {
@@ -22,6 +23,12 @@ const routes: RouteRecordRaw[] = [
     name:'SteelPhase',
     component: SteelPhase,
     meta: { title: '钢铁相图' }
+  },
+  {
+    path:'/predict',
+    name:'GlassPredict',
+    component: Predict,
+    meta: { title: '玻璃成分预测' }
   },
   {
     path: '/:pathMatch(.*)*', // 404页面

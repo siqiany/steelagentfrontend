@@ -20,6 +20,9 @@
         <el-menu-item index="/sphase">
           相图计算
         </el-menu-item>
+        <el-menu-item index="/predict">
+          预测成分
+        </el-menu-item>
       </el-menu>
     </el-header>
   </el-container>
